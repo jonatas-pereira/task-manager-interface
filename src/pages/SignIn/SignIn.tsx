@@ -1,37 +1,49 @@
-import PictureLogin from '../../assets/lock.png'
-import "./styles.css"
+import { IoCloseSharp } from "react-icons/io5"
+import PictureLogin from "../../assets/signInPicture.png"
+import Vetor from "../../assets/VectorSignIn.svg"
 
 const SignIn = () => {
+
    return ( 
-    <div className="flex justify-center items-center w-full h-screen color-bg font">
-      <main className="flex justify-center items-center w-full h-5/6 max-w-screen-xl min-w-80 sm:flex-row">
-         <div className="basis-1/2 hidden justify-center items-center h-full rounded-l-2xl primary-bg-color sm:flex">
-            <img src={PictureLogin} className="w-72" alt="" />
-         </div>
-         <div className="basis-1 flex flex-col justify-center items-center h-full w-11/12 p-24 rounded-lg secondary-bg-color sm:basis-1/2">
-            <div className="flex flex-col justify-center items-center w-2/4">
-               <h1 className="font text-6xl">Sign in</h1>
-               <div>
-                  <form>
-                     <p>Email</p>
-                     <input type="text" placeholder='Enter your email' />
-                     <p>Password</p>
-                     <input type="text" placeholder='Enter your password'/>
-                     <div className='flex justify-between'>
-                        <input type="checkbox" id='' />
-                        <label htmlFor="">Remember me</label>
-                        <a href="">Forgot password</a>
+      <div className={"flex justify-center items-center w-full h-screen font-fontCaveat bg-gradient-to-r from-whiteI to-whiteF"}>
+         <main className="flex justify-center items-center w-full h-5/6 max-w-screen-xl min-w-80 rounded-xl secondary-bg-color sm:flex-row">
+            <div className="basis-1/2 hidden justify-center items-center h-full rounded-l-xl bg-gradient-to-r from-blueI to-blueF sm:flex">
+               <img src={PictureLogin} className="w-72" alt="" />
+            </div>
+            <div className=" relative flex flex-col justify-center items-center h-full w-full m-10 rounded-xl bg-secondS sm:basis-1/2 sm:rounded-l-none sm:rounded-r-lg sm:m-0">
+               <img className=" h-full w-auto absolute right-full hidden sm:block" src={Vetor} alt="" />
+               <div className="flex flex-col justify-center items-center w-full">
+                  <h1 className="text-6xl mb-12 text-titleC caveat-primary">Entre na conta</h1>
+                  <div className="w-full p-4 sm:w-3/5 sm:p-0">
+                     <form className="w-full text-2xl ">
+                        <p className="text-dark">Email</p>
+                        <div className="mb-7">
+                           <input className="w-full text-xl pt-2 bg-transparent text-gray-500 focus:outline-none" type="text" placeholder='Digite seu email'/>
+                           <div className="w-full h-1 bg-gradient-to-r from-btnF to-btnI"></div>
+                        </div>
+                        <p className="text-dark">Senha</p>
+                        <div className=" mb-2 ">
+                           <input className="w-full text-xl pt-2 bg-transparent text-gray-500 focus:outline-none" type="text" placeholder='Digite sua senha'/>
+                           <div className="w-full h-1 bg-gradient-to-r from-btnF to-btnI"></div>
+                        </div>
+                        <div className='flex justify-between'>
+                           <div className="flex items-center">
+                              <input type="checkbox" id='' />
+                              <label className="text-base text-dark underline decoration-1">Lembrar senha</label>
+                           </div>
+                           <a href="" className="text-base text-dark">Esqueceu a senha?</a>
+                        </div>
+                     </form>
+                     <div className='w-full flex justify-around mt-10'>
+                        <button className="w-5/12 h-10 rounded-lg border-none text-2xl bg-gradient-to-r from-btnI to-btnF text-zinc-50">Entrar</button>
+                        <button className="w-5/12 h-10 rounded-lg border-solid border-2 text-2xl text-btnColor border-btnColor">Cadastrar</button>
                      </div>
-                  </form>
-                  <div className='flex justify-around'>
-                     <button className="">Sign in</button>
-                     <button className="">Sign up</button>
                   </div>
                </div>
+               <IoCloseSharp className="absolute right-6 top-6 text-light size-8 "/>
             </div>
-         </div>
-      </main>
-    </div>
+         </main>
+      </div>
    )
 }
 
