@@ -1,11 +1,10 @@
 import './App.css'
-import SignIn from './pages/SignIn/SignIn'
-//import SignUp from './pages/SignUp/SignUp'
+import NavRoutes from './routes/Routes'
 
 function App() {
   return (
     <>
-      <SignIn />
+      <NavRoutes />
     </>
   )
 }
