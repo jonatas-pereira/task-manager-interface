@@ -22,7 +22,7 @@ export default {
         'dark': '#5E5E5E'
       },
       fontFamily: {
-        'fontCaveat': '"Caveat", cursive'
+        'roboto-regular': '"Roboto", sans-serif'
       },
     },
   },
